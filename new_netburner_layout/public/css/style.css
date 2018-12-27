@@ -57,7 +57,7 @@ html,body {
 	font-size: 18px;
 }
 
-hr{
+.hr{
 	border: none;
     height: 4px;
     /* Set the hr color */

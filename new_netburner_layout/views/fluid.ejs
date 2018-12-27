@@ -1,26 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta name="description" content="Home Page">
-  <meta name="author" content="Luke Pierce">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <% include partials/head %>
 </head>
 <body>
-  <nav>
-    <% include partials/nav %>
-  </nav>
-  <section class="container container-small">
-    <h1 class="text-center">
-      Fluid Parameters
-    </h1>
-    <br>
-    <div class="row">
-    <div class="col-md-10 col-centered">
-        <article>
-          <table class="table table-striped two-row">
+  <div class="content">
+    <nav>
+      <% include partials/nav %>
+    </nav>
+    <br><br>
+    <section class="container container-small">
+      <h1 class="has-text-centered is-size-3 darkGreen">
+        Fluid Parameters
+      </h1>
+      <br>
+      <div class="container">
+        <div class="card">
+          <div class="card-content">
+            <table class="table is-striped">
             <tbody>
               <tr>
                 <th scope="row">Selected Fluid Type</th>
@@ -55,13 +52,13 @@
                 <td>2.30307 psia</td>
               </tr>
             </tbody>
-          </table>
-        </article>
-    </div>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-  </section>
   <footer>
   <% include partials/footer %> 
   </footer>
-</body>
 </html>

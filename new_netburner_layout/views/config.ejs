@@ -1,28 +1,58 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta name="description" content="Home Page">
-  <meta name="author" content="Luke Pierce">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <% include partials/head %>
 </head>
 <body>
-  <nav>
-    <% include partials/nav %>
-  </nav>
-  <div class="row">
-    <div class="col-md-3 offset">
-      <% include partials/config %>
-    </div>
-    <div class="col-md-7 col-md-offset-2">
+  <div class="content">
+    <nav>
+      <% include partials/nav %>
+    </nav>
+  <aside class="menu">
+    <p class="menu-label">
+      General
+    </p>
+    <ul class="menu-list">
+      <li><a>Dashboard</a></li>
+      <li><a>Customers</a></li>
+    </ul>
+    <p class="menu-label">
+      Administration
+    </p>
+    <ul class="menu-list">
+      <li><a>Team Settings</a></li>
+      <li>
+        <a class="is-active">Manage Your Team</a>
+        <ul>
+          <li><a>Members</a></li>
+          <li><a>Plugins</a></li>
+          <li><a>Add a member</a></li>
+        </ul>
+      </li>
+      <li><a>Invitations</a></li>
+      <li><a>Cloud Storage Environment Settings</a></li>
+      <li><a>Authentication</a></li>
+    </ul>
+    <p class="menu-label">
+      Transactions
+    </p>
+    <ul class="menu-list">
+      <li><a>Payments</a></li>
+      <li><a>Transfers</a></li>
+      <li><a>Balance</a></li>
+    </ul>
+  </aside>
+    
+    <div class="columns">
+      <div class="column">
+          
+      </div>
+      <div class="column"></div>
     </div>
   </div>
-  <section class="container container-small">
-  </section>
-  <footer>
-  <% include partials/footer %> 
-  </footer>
 </body>
+<footer>
+      <% include partials/footer %> 
+</footer>
 </html>
+
