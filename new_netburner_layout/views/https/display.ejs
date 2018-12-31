@@ -1,135 +1,134 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta name="description" content="Home Page">
-  <meta name="author" content="Luke Pierce">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <nav>
-    <% include ../partials/nav %>
-  </nav>
-  <div class="row">
-    <div class="col-md-3" style="padding-left: 30px;">
-      <% include ../partials/config %>
-    </div>
-    <div class="col-md-9">
-      <h2>Meter LCD Display Configuration</h2>
-      <br>
-      <form action="Output.html" method="POST" class="form-group" id="output">
-          <div class="row">
-            <div class="col-md-2"> <b>Cycle Time</b></div>
-            <div class="col-md-5"> <input type="text" class="form-control" id="cycleTime" value="0"></div>
-          </div>
-          <br> 
-          <div class="row">
-            <div class="col-md-2"> <b>Number of Digits</b></div>
-            <div class="col-md-5"> <input type="text" class="form-control" id="numDigits" value="0"></div>
-          </div>
-          <br> 
-          <div class="row">
-            <div class="col-md-2"> <b>Display TC (s)</b></div>
-            <div class="col-md-5"> <input type="text" class="form-control" id="displayTC" value="0"></div>
-          </div>
-          <br>
-          <hr align="left" width="60%">
-          <h3>LCD Display Items</h3>
-          <br>
-          <div class="row">
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Totalizer
-                </label>
+   <head>
+      <link rel="stylesheet" href="../css/bulma.min.css">
+      <link rel="stylesheet" href="../css/style.css">
+      <% include ../partials/head %>
+   </head>
+   <body>
+      <div class="content">
+         <nav>
+            <% include ../partials/nav %>
+         </nav>
+         <!-- The sidebar -->
+         <div class="sidebar">
+            <% include ../partials/config %>
+         </div>
+         <!-- Page content -->
+         <div class="contentSection container">
+            <br><br>
+            <div class="">
+               <div class="card">
+                  <div class="card-content">
+                     <h1 class="has-text-left is-size-4 darkGreen">
+                        Meter LCD Display Configuration
+                     </h1>
+                     <br><br>
+                     <div class="columns">
+                        <div class="column is-one-fifth label">
+                           Cycle Time
+                        </div>
+                        <div class="column is-four-fifths">
+                           <input class="input" type="text" placeholder="Text input" />
+                        </div>
+                     </div>
+                     <br>
+                     <div class="columns">
+                        <div class="column is-one-fifth label">
+                           Number of Digits
+                        </div>
+                        <div class="column is-four-fifths">
+                           <input class="input" type="text" placeholder="Text input" />
+                        </div>
+                     </div>
+                     <br>
+                     <div class="columns">
+                        <div class="column is-one-fifth label">
+                           Display TC (s)
+                        </div>
+                        <div class="column is-four-fifths">
+                           <input class="input" type="text" placeholder="Text input" />
+                        </div>
+                     </div>
+                     <hr>
+                     <h1 class="has-text-left is-size-4 darkGreen">
+                        LCD Display Items
+                     </h1>
+                     <br>
+                     <div class="columns">
+                        <div class="column is-one-fifth">
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Totalizer
+                           </label>
+                           <br>
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Temperature
+                           </label>
+                           <br>
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Energy
+                           </label>
+                           <br>
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Alarm[3]
+                           </label>
+                           <br>
+                        </div>
+                        <div class="column is-one-fifth">
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Density
+                           </label>
+                           <br>
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Volume Flow
+                           </label>
+                           <br>
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Date and Time
+                           </label>
+                           <br>
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Alarm[2]
+                           </label>
+                        </div>
+                        <div class="column is-one-fifth">
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Pressure
+                           </label>
+                           <br>
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Mass Flow
+                           </label>
+                           <br>
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Fluid
+                           </label>
+                           <br>
+                           <label class="checkbox checkBox">
+                           <input class="big-checkbox" type="checkbox">
+                           Alarm[1]
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Density
-                </label>
-            </div>
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Pressure
-                </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Temperature
-                </label>
-            </div>
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Volume Flow
-                </label>
-            </div>
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Mass Flow
-                </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Energy
-                </label>
-            </div>
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Date & Time
-                </label>
-            </div>
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Fluid
-                </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Alarm[3]
-                </label>
-            </div>
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Alarm[2]
-                </label>
-            </div>
-            <div class="col-md-2">
-              <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck1">
-                <label class="form-check-label" for="gridCheck1">
-                  Alarm[1]
-                </label>
-            </div>
-          </div>
-          <br>
-          <button type="button" class="btn btn-primary btn-block wideBTN">SET</button>                          
-      </form>
-    </div>
-  </div>
-  <section class="container container-small">
-  </section>
-  <footer>
-  <% include ../partials/footer %> 
-  </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/script.js"></script>
-</body>
+         </div>
+      </div>
+      <script type="text/javascript" src="../js/accordion.js"></script>
+   </body>
+   <footer>
+      <% include ../partials/footer %>
+   </footer>
 </html>

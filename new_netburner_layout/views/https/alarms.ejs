@@ -1,170 +1,205 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta name="description" content="Home Page">
-  <meta name="author" content="Luke Pierce">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <nav>
-    <% include ../partials/nav %>
-  </nav>
-  <div class="row">
-    <div class="col-md-3" style="padding-left: 30px;">
-      <% include ../partials/config %>
-    </div>
-    <div class="col-md-9">
-    <h2>Alarm Configuration</h2>
-    <form action="Output.html" method="POST" class="form-group" id="output" style="margin-bottom: 100px;">
-      <div class="accordian">
-        <div class="head" data-toggle="collapse" data-target="#outputs">
-          Alarms
-        </div>
-        <div class="body collapse in" id="outputs">
-          <div class="row">
-            <div class="col-xs-3 col-xs-offset-2">
-              <h5 class="label">Measure</h5>
+   <head>
+      <link rel="stylesheet" href="../css/bulma.min.css">
+      <link rel="stylesheet" href="../css/style.css">
+      <% include ../partials/head %>
+   </head>
+   <body>
+      <div class="content">
+         <nav>
+            <% include ../partials/nav %>
+         </nav>
+         <!-- The sidebar -->
+         <div class="sidebar">
+            <% include ../partials/config %>
+         </div>
+         <!-- Page content -->
+         <div class="contentSection container">
+            <div class="columns">
+               <div class="column">
+                  <br>
+                  <h1 class="has-text-left is-size-4 darkGreen">
+                     Alarm Configuration
+                  </h1>
+                  <br>
+                  <div class="accordion">
+                     <div class="accordion-section">
+                        <a class="accordion-section-title" href="#accordion-1">Alarms</a>
+                        <div id="accordion-1" class="accordion-section-content">
+                           <form action="Output.html" method="POST" class="form-group" id="output">
+                              <div class="columns">
+                                 <div class="column">
+                                 </div>
+                                 <div class="column is-one-fifth label">
+                                    Measure
+                                 </div>
+                                 <div class="column label">
+                                    Action
+                                 </div>
+                                 <div class="column label">
+                                    Limit
+                                 </div>
+                                 <div class="column label">
+                                    Units
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column label">
+                                    Alarm Output 1
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <div class="select">
+                                       <select>
+                                          <option value="{{value}}">None</option>
+                                          <option value="{{value}}">Mass Flow</option>
+                                          <option value="{{value}}">Volume Flow</option>
+                                          <option value="{{value}}">Energy</option>
+                                          <option value="{{value}}">Temperature 1</option>
+                                          <option value="{{value}}">Temperature 2</option>
+                                          <option value="{{value}}">Pressure</option>
+                                          <option value="{{value}}">Density</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <div class="select">
+                                       <select>
+                                          <option value="{{value}}">None</option>
+                                          <option value="{{value}}">Mass Flow</option>
+                                          <option value="{{value}}">Volume Flow</option>
+                                          <option value="{{value}}">Energy</option>
+                                          <option value="{{value}}">Temperature 1</option>
+                                          <option value="{{value}}">Temperature 2</option>
+                                          <option value="{{value}}">Pressure</option>
+                                          <option value="{{value}}">Density</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="column">
+                                    <input class="input" type="text" placeholder="Text input">
+                                 </div>
+                                 <div class="column label">
+                                    lb/hr
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column label">
+                                    Alarm Output 1
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <div class="select">
+                                       <select>
+                                          <option value="{{value}}">None</option>
+                                          <option value="{{value}}">Mass Flow</option>
+                                          <option value="{{value}}">Volume Flow</option>
+                                          <option value="{{value}}">Energy</option>
+                                          <option value="{{value}}">Temperature 1</option>
+                                          <option value="{{value}}">Temperature 2</option>
+                                          <option value="{{value}}">Pressure</option>
+                                          <option value="{{value}}">Density</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <div class="select">
+                                       <select>
+                                          <option value="{{value}}">None</option>
+                                          <option value="{{value}}">Mass Flow</option>
+                                          <option value="{{value}}">Volume Flow</option>
+                                          <option value="{{value}}">Energy</option>
+                                          <option value="{{value}}">Temperature 1</option>
+                                          <option value="{{value}}">Temperature 2</option>
+                                          <option value="{{value}}">Pressure</option>
+                                          <option value="{{value}}">Density</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="column">
+                                    <input class="input" type="text" placeholder="Text input">
+                                 </div>
+                                 <div class="column label">
+                                    lb/hr
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column label">
+                                    Alarm Output 1
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <div class="select">
+                                       <select>
+                                          <option value="{{value}}">None</option>
+                                          <option value="{{value}}">Mass Flow</option>
+                                          <option value="{{value}}">Volume Flow</option>
+                                          <option value="{{value}}">Energy</option>
+                                          <option value="{{value}}">Temperature 1</option>
+                                          <option value="{{value}}">Temperature 2</option>
+                                          <option value="{{value}}">Pressure</option>
+                                          <option value="{{value}}">Density</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <div class="select">
+                                       <select>
+                                          <option value="{{value}}">None</option>
+                                          <option value="{{value}}">Mass Flow</option>
+                                          <option value="{{value}}">Volume Flow</option>
+                                          <option value="{{value}}">Energy</option>
+                                          <option value="{{value}}">Temperature 1</option>
+                                          <option value="{{value}}">Temperature 2</option>
+                                          <option value="{{value}}">Pressure</option>
+                                          <option value="{{value}}">Density</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="column">
+                                    <input class="input" type="text" placeholder="Text input">
+                                 </div>
+                                 <div class="column label">
+                                    lb/hr
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="card">
+                     <div class="card-content">
+                        <div class="is-size-5 has-text-left">
+                           Number of Alarm Logs: 0
+                           <br><br>
+                           Alarms:
+                        </div>
+                        <br>
+                        <div class="columns">
+                           <div class="column is-one-fifth">
+                              <div class="select is-fullwidth">
+                                 <select style="width:100%;">
+                                    <option>Alarm 0</option>
+                                    <option>Alarm 1</option>
+                                    <option>Alarm 2</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="column is-two-fifths">
+                              <input class="input" type="text" placeholder="Text input">
+                           </div>
+                           <div class="column is-two-fifths">
+                              <a class="button is-link is-focused">Clear Alarm Logs</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-xs-2">
-              <h5 class="label">Action</h5>
-            </div>
-            <div class="col-xs-2">
-              <h5 class="label">Limit</h5>
-            </div>
-            <div class="col-xs-2">
-              <h5 class="label">Units</h5>
-            </div>
-          </div>
-          <br>
-          <div class="row bottom-buffer-lg">
-            <div class="col-xs-2">
-              <h5 class="label">Alarm Output 1</h5>
-            </div>
-            <div class="col-xs-3">
-              <select class="form-control" id="measure{{index}}" name="analog_output{{index}}">
-                  <option value="{{value}}">None</option>
-                  <option value="{{value}}">Mass Flow</option>
-                  <option value="{{value}}">Volume Flow</option>
-                  <option value="{{value}}">Energy</option>
-                  <option value="{{value}}">Temperature 1</option>
-                  <option value="{{value}}">Temperature 2</option>
-                  <option value="{{value}}">Pressure</option>
-                  <option value="{{value}}">Density</option>
-              </select>
-            </div>
-            <div class="col-xs-2">
-              <select class="form-control" id="measure{{index}}" name="analog_output{{index}}">
-                  <option value="{{value}}">None</option>
-                  <option value="{{value}}">Low</option>
-                  <option value="{{value}}">High</option>
-              </select>
-            </div>
-            <div class="col-xs-2">
-              <input class="form-control" type="text" value="-1.71465e+38" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-            <div class="col-xs-1">
-              <h5 class="unit">lb/hr</h5>
-            </div>            
-          </div>
-          <br>
-          <div class="row bottom-buffer-lg">
-            <div class="col-xs-2">
-              <h5 class="label">Alarm Output 1</h5>
-            </div>
-            <div class="col-xs-3">
-              <select class="form-control" id="measure{{index}}" name="analog_output{{index}}">
-                  <option value="{{value}}">None</option>
-                  <option value="{{value}}">Mass Flow</option>
-                  <option value="{{value}}">Volume Flow</option>
-                  <option value="{{value}}">Energy</option>
-                  <option value="{{value}}">Temperature 1</option>
-                  <option value="{{value}}">Temperature 2</option>
-                  <option value="{{value}}">Pressure</option>
-                  <option value="{{value}}">Density</option>
-              </select>
-            </div>
-
-            <div class="col-xs-2">
-              <select class="form-control" id="measure{{index}}" name="analog_output{{index}}">
-                  <option value="{{value}}">None</option>
-                  <option value="{{value}}">Low</option>
-                  <option value="{{value}}">High</option>
-              </select>
-            </div>
-
-            <div class="col-xs-2">
-              <input class="form-control" type="text" value="-1.71465e+38" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-
-            <div class="col-xs-1">
-              <h5 class="unit">lb/hr</h5>
-            </div>
-          </div>
-          <br>
-          <div class="row bottom-buffer-lg">
-            <div class="col-xs-2">
-              <h5 class="label">Alarm Output 1</h5>
-            </div>
-            <div class="col-xs-3">
-              <select class="form-control" id="measure{{index}}" name="analog_output{{index}}">
-                  <option value="{{value}}">None</option>
-                  <option value="{{value}}">Mass Flow</option>
-                  <option value="{{value}}">Volume Flow</option>
-                  <option value="{{value}}">Energy</option>
-                  <option value="{{value}}">Temperature 1</option>
-                  <option value="{{value}}">Temperature 2</option>
-                  <option value="{{value}}">Pressure</option>
-                  <option value="{{value}}">Density</option>
-              </select>
-            </div>
-            <div class="col-xs-2">
-              <select class="form-control" id="measure{{index}}" name="analog_output{{index}}">
-                  <option value="{{value}}">None</option>
-                  <option value="{{value}}">Low</option>
-                  <option value="{{value}}">High</option>
-              </select>
-            </div>
-            <div class="col-xs-2">
-              <input class="form-control" type="text" value="-1.71465e+38" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-            <div class="col-xs-1">
-              <h5 class="unit">lb/hr</h5>
-            </div>
-          </div>
-        </div>  
+         </div>
       </div>
-    </form>
-    <div align="left" style="clear: both;">
-      <br>
-      <hr width="76%"; align="left";>
-      <br>
-    </div>
-    <form action="Output.html" method="POST" class="form-group">
-      <table cellpadding=5 cellspacing=5>
-        <p style="font-weight: bold; font-size: 17px;">Number of Alarm Logs: 0</p>
-        <br>
-        <p class="label">Alarms:</p>
-        <select style='width: 4em; margin-right: 3px;'>
-          <option value=0>0</option>
-          <option value=0>1</option>
-          <option value=0>2</option>
-        </select>
-        <input type=text style='width: 30em; margin-right: 3px;' value='PLACEHOLDER' >
-        <button type=submit name=clearalarms value=clear class="btn btn-primary">Clear Alarms Logs</button>
-      </table>
-    </form>
-    </div>
-  </div>
-  <section class="container container-small">
-  </section>
-  <footer>
-  <% include ../partials/footer %> 
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/script.js"></script>
-</body>
+      <script type="text/javascript" src="../js/accordion.js"></script>
+   </body>
+   <footer>
+      <% include ../partials/footer %>
+   </footer>
 </html>

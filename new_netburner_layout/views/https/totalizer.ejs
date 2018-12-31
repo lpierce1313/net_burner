@@ -1,118 +1,124 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta name="description" content="Home Page">
-  <meta name="author" content="Luke Pierce">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <nav>
-    <% include ../partials/nav %>
-  </nav>
-  <div class="row">
-    <div class="col-md-3" style="padding-left: 30px;">
-      <% include ../partials/config %>
-    </div>
-    <div class="col-md-9">
-    <h2>Configure Totalizers</h2>
-    <form action="Output.html" method="POST" class="form-group" id="output">
-      <div class="accordian">
-        <div class="head" data-toggle="collapse" data-target="#outputs">
-          Totalizer
-        </div>
-        <div class="body collapse in" id="outputs">
-          <div class="row">
-            <div class="col-xs-2 col-xs-offset-2">
-              <h5 class="label">Measure</h5>
+   <head>
+      <link rel="stylesheet" href="../css/bulma.min.css">
+      <link rel="stylesheet" href="../css/style.css">
+      <% include ../partials/head %>
+   </head>
+   <body>
+      <div class="content">
+         <nav>
+            <% include ../partials/nav %>
+         </nav>
+         <!-- The sidebar -->
+         <div class="sidebar">
+            <% include ../partials/config %>
+         </div>
+         <!-- Page content -->
+         <div class="contentSection container">
+            <div class="columns">
+               <div class="column">
+                  <br>
+                  <h1 class="has-text-left is-size-4 darkGreen">
+                     Configure Totalizers
+                  </h1>
+                  <br>
+                  <div class="accordion">
+                     <div class="accordion-section">
+                        <a class="accordion-section-title" href="#accordion-1">Totalizer</a>
+                        <div id="accordion-1" class="accordion-section-content">
+                           <form action="Output.html" method="POST" class="form-group" id="output">
+                              <div class="columns">
+                                 <div class="column">
+                                 </div>
+                                 <div class="column is-one-fifth label">
+                                    Measure
+                                 </div>
+                                 <div class="column label">
+                                    SET
+                                 </div>
+                                 <div class="column label">
+                                    Units
+                                 </div>
+                                 <div class="column label">
+                                    Total
+                                 </div>
+                                 <div class="column label">
+                                    CLEAR
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column label">
+                                    Totalizer 1
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <div class="select is-fullwidth">
+                                       <select>
+                                          <option value="{{value}}">None</option>
+                                          <option value="{{value}}">Mass Flow</option>
+                                          <option value="{{value}}">Volume Flow</option>
+                                          <option value="{{value}}">Energy</option>
+                                          <option value="{{value}}">Temperature 1</option>
+                                          <option value="{{value}}">Temperature 2</option>
+                                          <option value="{{value}}">Pressure</option>
+                                          <option value="{{value}}">Density</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="column">
+                                    <a class="button is-warning is-hovered is-fullwidth">SET</a>
+                                 </div>
+                                 <div class="column">
+                                    <input class="input" type="text" placeholder="Text input">
+                                 </div>
+                                 <div class="column">
+                                    <input class="input" type="text" placeholder="Text input">
+                                 </div>
+                                 <div class="column">
+                                    <a class="button is-link is-hovered is-fullwidth">CLEAR</a>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column label">
+                                    Amount/Pulse
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <div class="select is-fullwidth">
+                                       <select>
+                                          <option value="{{value}}">None</option>
+                                          <option value="{{value}}">Mass Flow</option>
+                                          <option value="{{value}}">Volume Flow</option>
+                                          <option value="{{value}}">Energy</option>
+                                          <option value="{{value}}">Temperature 1</option>
+                                          <option value="{{value}}">Temperature 2</option>
+                                          <option value="{{value}}">Pressure</option>
+                                          <option value="{{value}}">Density</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="column">
+                                    <a class="button is-warning is-hovered is-fullwidth">SET</a>
+                                 </div>
+                                 <div class="column">
+                                    <input class="input" type="text" placeholder="Text input">
+                                 </div>
+                                 <div class="column">
+                                    <input class="input" type="text" placeholder="Text input">
+                                 </div>
+                                 <div class="column">
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-xs-2">
-              <h5 class="label">SET</h5>
-            </div>
-            <div class="col-xs-2">
-              <h5 class="label">Units</h5>
-            </div>
-            <div class="col-xs-2">
-              <h5 class="label">Total</h5>
-            </div>
-            <div class="col-xs-2">
-              <h5 class="label">CLEAR</h5>
-            </div>
-          </div>
-          <br>
-          <div class="row bottom-buffer-lg">
-            <div class="col-xs-2">
-              <h5 class="label">Totalizer 1</h5>
-            </div>
-            <div class="col-xs-2">
-              <select class="form-control" id="measure{{index}}" name="analog_output{{index}}">
-                  <option value="{{value}}">None</option>
-                  <option value="{{value}}">Mass</option>
-                  <option value="{{value}}">Volume</option>
-              </select>
-            </div>
-
-            <div class="col-xs-2">
-              <button type="button" class="btn btn-warning btn-block">SET</button>                          
-            </div>
-
-            <div class="col-xs-2">
-              <input class="form-control" type="text" value="-1.71465e+38" mb name="mA4{{index}}" id="mA4{{index}}" />
-            </div>
-
-            <div class="col-xs-2">
-              <input class="form-control" type="text" value="-1.71465e+38" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-
-            <div class="col-xs-2">
-              <button type="button" class="btn btn-primary btn-block">CLEAR</button>                          
-            </div>
-
-          </div>
-          <br>
-          <div class="row bottom-buffer-lg">
-            <div class="col-xs-2">
-              <h5 class="label">Amount/Pulse</h5>
-            </div>
-
-            <div class="col-xs-2">
-              <select class="form-control" id="measure{{index}}" name="analog_output{{index}}">
-                  <option value="{{value}}">None</option>
-                  <option value="{{value}}">Mass</option>
-                  <option value="{{value}}">Volume</option>                  
-              </select>
-            </div>
-
-            <div class="col-xs-2">
-              <button type="button" class="btn btn-warning btn-block">SET</button>                          
-            </div>
-
-            <div class="col-xs-2">
-              <input class="form-control" type="text" value="-1.71465e+38" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-
-            <div class="col-xs-2">
-              <input class="form-control" type="text" value="-1.71465e+38" mb name="TC{{index}}" id="TC{{index}}"/>
-            </div>
-
-            <div class="col-xs-2">
-            </div>
-          </div>
-        </div>  
+         </div>
       </div>
-      <br>
-    </form>
-    </div>
-  </div>
-  <section class="container container-small">
-  </section>
-  <footer>
-  <% include ../partials/footer %> 
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/script.js"></script>
-</body>
+      <script type="text/javascript" src="../js/accordion.js"></script>
+   </body>
+   <footer>
+      <% include ../partials/footer %>
+   </footer>
 </html>

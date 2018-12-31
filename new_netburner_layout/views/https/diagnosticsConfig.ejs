@@ -1,126 +1,131 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta name="description" content="Home Page">
-  <meta name="author" content="Luke Pierce">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <nav>
-    <% include ../partials/nav %>
-  </nav>
-  <div class="row">
-    <div class="col-md-3" style="padding-left: 30px;">
-      <% include ../partials/config %>
-    </div>
-    <div class="col-md-8">
-    <h2>Diagnostics Menu</h2>
-    <p>Zero values stop simulation.</p>
-    <br><br>
-    <form action="DiagnosticConfig.html" method="POST">
-      <div class="row">
-          <div class="col-md-3"><h5 class="label">Simulated Vor Freq (Hz)</h5></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" mb name="simFreq" value="-1.71465e+38"/>
-          </div>
+   <head>
+      <link rel="stylesheet" href="../css/bulma.min.css">
+      <link rel="stylesheet" href="../css/style.css">
+      <% include ../partials/head %>
+   </head>
+   <body>
+      <div class="content">
+         <nav>
+            <% include ../partials/nav %>
+         </nav>
+         <!-- The sidebar -->
+         <div class="sidebar">
+            <% include ../partials/config %>
+         </div>
+         <!-- Page content -->
+         <div class="contentSection container">
+            <div class="container">
+               <br>
+               <div class="card">
+                  <div class="card-content" style="overflow:scroll; height:850px;">
+                     <h1 class="has-text-left is-size-4 darkGreen">
+                        Diagnostics Menu
+                     </h1>
+                     <p class="has-text-left is-size-6">Zero values stop simulation</p>
+                     <br>
+                     <form action="DiagnosticConfig.html" method="POST">
+                        <div class="columns">
+                           <div class="column is-one-quarter">
+                              <h5 class="label">Simulated Vor Freq (Hz)</h5>
+                           </div>
+                           <div class="column is-three-fifths">
+                              <input class="input" type="text" mb name="simFreq" value="-1.71465e+38"/>
+                           </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                           <div class="column is-one-quarter">
+                              <h5 class="label">Simulated Temp1 (&deg;F)</h5>
+                           </div>
+                           <div class="column is-three-fifths">
+                              <input class="input" type="text" mb name="simTemp1" value="-1.71465e+38"/>
+                           </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                           <div class="column is-one-quarter">
+                              <h5 class="label">Simulated Temp2 (&deg;F)</h5>
+                           </div>
+                           <div class="column is-three-fifths">
+                              <input class="input" type="text" mb name="simTemp2" value="-1.71465e+38"/>
+                           </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                           <div class="column is-one-quarter">
+                              <h5 class="label">Simulated Press (PSIA)</h5>
+                           </div>
+                           <div class="column is-three-fifths">
+                              <input class="input" type="text" mb name="simPressure" value="-1.71465e+38"/>
+                           </div>
+                        </div>
+                        <br><br>
+                        <div class="columns">
+                           <div class="column is-one-quarter">
+                              <h5 class="label">Max. Velocity (ft/sec)</h5>
+                           </div>
+                           <div class="column is-three-fifths">
+                              <input class="input" type="text" disabled value='-1.71465e+38'/>
+                           </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                           <div class="column is-one-quarter">
+                              <h5 class="label">Max. Temp (&deg;F)</h5>
+                           </div>
+                           <div class="column is-three-fifths">
+                              <input class="input" type="text" disabled value='-1.71465e+38'/>
+                           </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                           <div class="column is-one-quarter">
+                              <h5 class="label">Max. Temp1 (&deg;F)</h5>
+                           </div>
+                           <div class="column is-three-fifths">
+                              <input class="input" type="text" disabled value='-1.71465e+38'/>
+                           </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                           <div class="column is-one-quarter">
+                              <h5 class="label">Max. Internal Temp (&deg;F)</h5>
+                           </div>
+                           <div class="column is-three-fifths">
+                              <input class="input" type="text" disabled value='-1.71465e+38'/>
+                           </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                           <div class="column is-one-quarter">
+                              <h5 class="label">Min. Internal Temp (&deg;F)</h5>
+                           </div>
+                           <div class="column is-three-fifths">
+                              <input class="input" type="text" disabled value='-1.71465e+38'/>
+                           </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                           <div class="column is-one-quarter">
+                              <h5 class="label">Max. Pressure (PSIA) (&deg;F)</h5>
+                           </div>
+                           <div class="column is-three-fifths">
+                              <input class="input" type="text" disabled value='-1.71465e+38'/>
+                           </div>
+                        </div>
+                        <br>
+                        <button class="button is-link" style="width:20%;">Clear Max Values</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      <br>
-      <div class="row">
-          <div class="col-md-3"><h5 class="label">Simulated Temp1 (&deg;F)</h5></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" mb name="simTemp1" value="-1.71465e+38"/>
-          </div>
-      </div>
-      <br>
-      <div class="row">
-          <div class="col-md-3"><h5 class="label">Simulated Temp2 (&deg;F)</h5></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" mb name="simTemp2" value="-1.71465e+38"/>
-          </div>
-      </div>
-      <br>
-      <div class="row">
-          <div class="col-md-3"><h5 class="label">Simulated Press (PSIA)</h5></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" mb name="simPressure" value="-1.71465e+38"/>
-          </div>
-      </div>
-      <br><br><br>
-      <div class="row">
-          <div class="col-md-3"><h5 class="label">Max. Velocity (ft/sec)</h5></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" disabled value='-1.71465e+38'/>
-          </div>
-      </div>
-      <br>
-      <div class="row">
-          <div class="col-md-3"><h5 class="label">Max. Temp (&deg;F)</h5></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" disabled value='-1.71465e+38'/>
-          </div>
-      </div>
-      <br>
-      <div class="row">
-          <div class="col-md-3"><h5 class="label">Max. Temp1 (&deg;F)</h5></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" disabled value='-1.71465e+38'/>
-          </div>
-      </div>
-      <br>
-      <div class="row">
-          <div class="col-md-3"><h5 class="label">Max. Internal Temp (&deg;F)</h5></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" disabled value='-1.71465e+38'/>
-          </div>
-      </div>
-      <br>
-      <div class="row">
-          <div class="col-md-3"><h5 class="label">Min. Internal Temp (&deg;F)</h5></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" disabled value='-1.71465e+38'/>
-          </div>
-      </div>
-      <br>
-      <div class="row">
-          <div class="col-md-3"><h5 class="label">Max. Pressure (PSIA) (&deg;F)</h5></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" disabled value='-1.71465e+38'/>
-          </div>
-      </div>
-      <br><br>  
-      <div class="row">
-          <div class="col-md-4">
-            <button class="nbEventBtn btn btn-md btn-primary btn-block" name="clearmax">
-              Clear Max Values
-            </button>
-          </div>
-      </div>
-    </form>
-    <br>
-    <hr width="76%"; align="left";>
-    <br>
-    <form action="Output.html" method="POST" class="form-group">
-      <table cellpadding=5 cellspacing=5>
-        <p style="font-weight: bold; font-size: 17px;">Number of System Logs: 0</p>
-        <br>
-        <p class="label">System:</p>
-        <select style='width: 4em; margin-right: 3px;'>
-          <option value=0>0</option>
-          <option value=0>1</option>
-          <option value=0>2</option>
-        </select>
-        <input type=text style='width: 30em; margin-right: 3px;' value='PLACEHOLDER' >
-        <button type=submit name=clearalarms value=clear class="btn btn-primary">Clear Log</button>
-      </table>
-    </form>
-  </div>
-  <section class="container container-small">
-  </section>
-  <footer>
-  <% include ../partials/footer %> 
-  </footer>
-</body>
+      <script type="text/javascript" src="../js/accordion.js"></script>
+   </body>
+   <footer>
+      <% include ../partials/footer %>
+   </footer>
 </html>

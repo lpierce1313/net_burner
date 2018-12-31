@@ -1,238 +1,226 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta name="description" content="Home Page">
-  <meta name="author" content="Luke Pierce">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <nav>
-    <% include ../partials/nav %>
-  </nav>
-  <div class="row">
-    <div class="col-md-3" style="padding-left: 30px;">
-      <% include ../partials/config %>
-    </div>
-    <div class="col-md-9">
-    <h2>Diagnostics Level 2</h2>
-    
-    <form action="Output.html" method="POST" class="form-group" id="output">
-      <div class="accordian">
-        <div class="head" data-toggle="collapse" data-target="#outputs">
-          4-20 ma Configuration
-        </div>
-        <div class="body collapse in" id="outputs">
-          <div class="row">
-            <div class="col-xs-3 col-xs-offset-3">
-              <h5 class="label">Zero</h5>
+   <head>
+      <link rel="stylesheet" href="../css/bulma.min.css">
+      <link rel="stylesheet" href="../css/style.css">
+      <% include ../partials/head %>
+   </head>
+   <body>
+      <div class="content">
+         <nav>
+            <% include ../partials/nav %>
+         </nav>
+         <!-- The sidebar -->
+         <div class="sidebar">
+            <% include ../partials/config %>
+         </div>
+         <!-- Page content -->
+         <div class="contentSection container">
+            <div class="columns">
+               <div class="column">
+                  <br>
+                  <h1 class="has-text-left is-size-4 darkGreen">
+                     Analog Output Configuration
+                  </h1>
+                  <br>
+                  <div class="accordion">
+                     <div class="accordion-section">
+                        <a class="accordion-section-title" href="#accordion-1">4-20 mA Configuration</a>
+                        <div id="accordion-1" class="accordion-section-content">
+                           <br>
+                           <form action="DiagnosticConfig.html" method="POST">
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <p class="label">Zero</p>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <p class="label">Fscale</p>
+                                 </div>
+                              </div>
+                              <br>
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">4-20(1)</p>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">4-20(2)</p>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">4-20(3)</p>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">Ext. 4-20ma Cal.</p>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">External Input</p>
+                                 </div>
+                                 <div class="column is-half">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <p class="label">N/A</p>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">Ext. 4-20mA Cal.</p>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                                 <div class="column is-one-quarter">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <br>
+                        <a class="accordion-section-title" href="#accordion-2">Troubleshooting Values 2</a>
+                        <div id="accordion-2" class="accordion-section-content" style="overflow:scroll; height:700px;">
+                           <br>
+                           <form action="DiagnosticConfig.html" method="POST">
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">Ext. 4-20mA Cal.</p>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <p class="label">Ext. 4-20mA Cal.</p>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">Ext. 4-20mA Cal.</p>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <p class="label">Ext. 4-20mA Cal.</p>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">Ext. 4-20mA Cal.</p>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <p class="label">Ext. 4-20mA Cal.</p>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">Ext. 4-20mA Cal.</p>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-one-fifth">
+                                    <p class="label">Ext. 4-20mA Cal.</p>
+                                 </div>
+                                 <div class="column is-one-fifth">
+                                    <input class="input" type="text" disabled value='-1.71465e+38'/>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-two-fifths">
+                                    <a class="button is-link is-fullwidth">Config Code</a>
+                                 </div>
+                                 <div class="column is-two-fifths">
+                                    <a class="button is-warning is-fullwidth">Store All in FRAM</a>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-two-fifths">
+                                    <a class="button is-link is-fullwidth">Press 9C's</a>
+                                 </div>
+                                 <div class="column is-two-fifths">
+                                    <a class="button is-warning is-fullwidth">Reset to Defaults</a>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-two-fifths">
+                                    <a class="button is-link is-fullwidth">RTD1 and RTD2</a>
+                                 </div>
+                                 <div class="column is-two-fifths">
+                                    <a class="button is-warning is-fullwidth">Clear Exception</a>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-two-fifths">
+                                    <a class="button is-link is-fullwidth">Correction Pairs</a>
+                                 </div>
+                                 <div class="column is-two-fifths">
+                                    <a class="button is-warning is-fullwidth">Reset Meter</a>
+                                 </div>
+                              </div>
+                              <div class="columns">
+                                 <div class="column is-two-fifths">
+                                 </div>
+                                 <div class="column is-two-fifths">
+                                    <a class="button is-warning is-fullwidth">Clear Config Changed</a>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-xs-3 col-xs-offset-1">
-              <h5 class="label">Fscale</h5>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">4-20(1)</h5>
-            </div>
-            <div class="col-xs-4">
-              <input class="form-control" type="text" value="0" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-            <div class="col-xs-4">
-              <input class="form-control" type="text" value="0" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">4-20(2)</h5>
-            </div>
-            <div class="col-xs-4">
-              <input class="form-control" type="text" value="0" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-            <div class="col-xs-4">
-              <input class="form-control" type="text" value="0" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">4-20(3)</h5>
-            </div>
-            <div class="col-xs-4">
-              <input class="form-control" type="text" value="0" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-            <div class="col-xs-4">
-              <input class="form-control" type="text" value="0" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">Ext. 4-20mA Cal.</h5>
-            </div>
-            <div class="col-xs-4">
-              <input class="form-control" type="text" value="Value not found" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-            <div class="col-xs-4">
-              <input class="form-control" type="text" value="Value not found" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">External Input</h5>
-            </div>
-            <div class="col-xs-8">
-              <input class="form-control" type="text" value="Value not found" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-            <div class="col-xs-1">
-              <b>N/A</b>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">Ext. 4-20mA Cal.</h5>
-            </div>
-            <div class="col-xs-4">
-              <input class="form-control" type="text" value="2.30306" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-            <div class="col-xs-4">
-              <input class="form-control" type="text" value="2.30306" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-          </div>
-        </div>           
+         </div>
       </div>
-    </form>
-
-    <form action="Output.html" method="POST" class="form-group" id="output">
-      <div class="accordian">
-        <div class="head" data-toggle="collapse" data-target="#outputsTwo">
-          Factory Configuration
-        </div>
-        <div class="body collapse in" id="outputsTwo">
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">Reynolds Corr.</h5>
-            </div>
-            <div class="col-xs-3">
-              <SELECT class="form-control small" mb name="disabledReynolds">
-                <OPTION {{#disabledReynolds}}selected{{/disabledReynolds}} value="1">Disabled</OPTION>
-                <OPTION {{^disabledReynolds}}selected{{/disabledReynolds}} value="0">Enabled</OPTION>
-              </SELECT>
-            </div>
-            <div class="col-xs-3">
-              <h5 class="label">Roughness</h5>
-            </div>
-            <div class="col-xs-3">
-              <input class="form-control" type="text" value="0" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">Gain Control</h5>
-            </div>
-            <div class="col-xs-3">
-              <SELECT class="form-control small" mb name="gain">
-                {{#gainOptions}}
-                  <OPTION value="{{value}}" {{selected}}>0</OPTION>
-                {{/gainOptions}}
-              </SELECT>
-            </div>
-            <div class="col-xs-3">
-              <h5 class="label">Min Delta H</h5>
-            </div>
-            <div class="col-xs-3">
-              <input class="form-control" type="text" value="0" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">Filter Control</h5>
-            </div>
-            <div class="col-xs-3">
-              <input class="form-control" type="text" value="0" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-            <div class="col-xs-3">
-              <h5 class="label">Init Displ. (sec)</h5>
-            </div>
-            <div class="col-xs-3">
-              <input class="form-control" type="text" value="0" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">High Pass Filter</h5>
-            </div>
-            <div class="col-xs-3">
-              <SELECT disabled class="form-control small" mb name="gain">
-                {{#gainOptions}}
-                  <OPTION value="{{value}}" {{selected}}>0</OPTION>
-                {{/gainOptions}}
-              </SELECT>              
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-3">
-              <h5 class="label">Meter Type</h5>
-            </div>
-            <div class="col-xs-3">
-              <input class="form-control" type="text" disabled value="inline" mb name="mA20{{index}}" id="mA20{{index}}"/>
-            </div>
-          </div>
-          <br><br>
-          <div class="row top-buffer-lg">
-            <div class="col-sm-6 top-buffer">
-              <button class="btn btn-md btn-primary btn-block modal-toggle" modal="#configCodeModal">
-                Config Code
-              </button>
-              
-              <button class="btn btn-md btn-primary btn-block modal-toggle" modal="#press9csModal">
-                Press 9C's
-              </button>
-              
-              <button class="btn btn-md btn-primary btn-block modal-toggle" modal="#rtdModal">
-                RTD 1 and RTD 2
-              </button>
-              
-              <button class="btn btn-md btn-primary btn-block modal-toggle" modal="#corrPairsModal">
-                Correction Pairs
-              </button>
-            </div>
-
-            <div class="col-sm-6 top-buffer">
-              <FORM action="Diag2.html" method="POST" id="factoryConfigButtons">
-                <button class="nbEventBtn btn btn-md btn-warning btn-block" name="fram">Store All in FRAM</button>
-                <button class="nbEventBtn btn btn-md btn-warning btn-block" name="resetdefaults">Reset to Defaults</button>
-                <button class="nbEventBtn btn btn-md btn-warning btn-block" name="clearexception">Clear Exception</button>
-                <button class="nbEventBtn btn btn-md btn-warning btn-block" name="resetmeter">Reset Meter</button>
-                <button class="nbEventBtn btn btn-md btn-warning btn-block" name="clearconfigchanged">Clear Config Changed</button>
-              </FORM>
-            </div>
-          </div>
-
-        </div>                             
-      </div>
-    </form>
-
-    </div>
-  </div>
-  <section class="container container-small">
-  </section>
-  <footer>
-  <% include ../partials/footer %> 
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/script.js"></script>
-</body>
+      <script type="text/javascript" src="../js/accordion.js"></script>
+   </body>
+   <footer>
+      <% include ../partials/footer %>
+   </footer>
 </html>
